@@ -2,6 +2,41 @@ import React, { useContext } from "react";
 import { CartContext } from "../context/CartContext";
 
 const CartItem = ({ item }) => {
+  const { incrementQuantity, decrementQuantity, removeItem } = useContext(CartContext);
+
+  return (
+    <li>
+      <p>{item.name}</p>
+      <p id={`cart-item-price-${item.id}`}>Price: ₹{item.price}</p>
+      <p id={`cart-amount-${item.id}`}>Quantity: {item.quantity}</p>
+      <button
+        id={`increment-btn-${item.id}`}
+        onClick={() => incrementQuantity(item.id)}
+      >
+        +
+      </button>
+      <button
+        id={`decrement-btn-${item.id}`}
+        onClick={() => decrementQuantity(item.id)}
+      >
+        -
+      </button>
+      <button
+        id={`cart-item-remove-${item.id}`}
+        onClick={() => removeItem(item.id)}
+      >
+        Remove
+      </button>
+    </li>
+  );
+};
+
+export default CartItem;
+/*
+import React, { useContext } from "react";
+import { CartContext } from "../context/CartContext";
+
+const CartItem = ({ item }) => {
   const { incrementQuantity, decrementQuantity } = useContext(CartContext);
 
   return (
