@@ -1,12 +1,39 @@
-h1 {
-    color: #27aedb;
-    text-align: center;
-    }
-    
-
-button{
-    color: #27aedb;
-    text-align: center;
-    justify-content: center;
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-}
+  }
+  
+  nav h1 {
+    margin: 0;
+  }
+  
+  nav p {
+    margin: 0;
+  }
+  
+  button {
+    margin: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  li {
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+  }
+  
